@@ -92,10 +92,38 @@ func validateSocial(number: String) -> Bool {
         return false
     }
 }
-let input = readLine()!
 
-validateID(name: input)
-validatePassword(password: input)
-validateSocial(number: input)
+func antFuction( input : Array<Int> )-> Array<Int> {
+    var previousValue = 1
+    var count = 0
+    var result : [Int] = []
+    
+    for item in input {
+        if item == previousValue {
+            count += 1
+        }
+        else if item != previousValue {
+            result.append(previousValue)
+            result.append(count)
+            previousValue = item
+            count = 1
+        }
+    }
+    result.append(previousValue)
+    result.append(count)
+    return result
+}
+let inputData = readLine()!
+
+
+//validateID(name: inputData)
+//validatePassword(password: inputData)
+//validateSocial(number: inputData)
+
+var inputArray : [Int] = []
+for ch in inputData {
+    inputArray.append(Int(String(ch))!)
+}
+antFuction(input:inputArray)
 
 
