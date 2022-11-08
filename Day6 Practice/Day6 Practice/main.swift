@@ -75,10 +75,27 @@ func validatePassword( password : String ) -> Int {
     return level
 }
 
+
+func validateSocial(number: String) -> Bool {
+    var arrayInt : [[Int]] = [[],[2,3,4,5,6,7,8,9,2,3,4,5,1]]
+    var sum = 0
+    for ch in number {
+        arrayInt[0].append(Int(String(ch))!)
+    }
+    for i in 0...12 {
+        sum += arrayInt[0][i] * arrayInt[1][i]
+    }
+    if (11 - (sum % 11) )/10 == arrayInt[0].last {
+        return true
+    }
+    else {
+        return false
+    }
+}
 let input = readLine()!
 
-//validateID(name: input)
+validateID(name: input)
 validatePassword(password: input)
-
+validateSocial(number: input)
 
 
