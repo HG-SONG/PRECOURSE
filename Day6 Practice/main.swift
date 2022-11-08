@@ -113,6 +113,28 @@ func antFuction( input : Array<Int> )-> Array<Int> {
     result.append(count)
     return result
 }
+
+func duplicateWords(inputWords:Array<String>)-> Array<String> {
+    var cntDict : [String:Int] = Dictionary()
+    var resultArray : [String] = []
+    for str in inputWords {
+        if cntDict[str] == 0 {
+            cntDict.updateValue(1, forKey: str)
+        }
+        else if cntDict[str] != 1 {
+            cntDict[str] = 0
+        }
+        
+    }
+    
+    for (key,value) in cntDict{
+        if value == 1 {
+            resultArray.append(key)
+        }
+    }
+    return resultArray
+}
+
 let inputData = readLine()!
 
 
@@ -120,10 +142,15 @@ let inputData = readLine()!
 //validatePassword(password: inputData)
 //validateSocial(number: inputData)
 
-var inputArray : [Int] = []
-for ch in inputData {
-    inputArray.append(Int(String(ch))!)
-}
-antFuction(input:inputArray)
+//*************************//
+//var intArray : [Int] = []
+//for ch in inputData {
+//    intArray.append(Int(String(ch))!)
+//}
+//antFuction(input:intArray)
+
+//**************************//
+var strArray : [String] = inputData.components(separatedBy: " ") //*
+duplicateWords(inputWords: strArray)
 
 
