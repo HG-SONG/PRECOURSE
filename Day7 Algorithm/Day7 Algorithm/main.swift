@@ -23,4 +23,15 @@ func solution1(_ arr:[Int], _ divisor:Int) -> [Int] {
     return resultArray
 }
 
+func solution2(_ numbers:[Int]) -> [Int] {
+    var sum = 0
+    var resultArray : [Int] = []
+    for i in 0 ..< numbers.count-1 {
+        for j in i+1 ..< numbers.count {
+            sum = numbers[i] + numbers[j]
+            resultArray.append(sum)
+        }
+    }
+    return Set(resultArray).sorted(by:<)
+}
 
