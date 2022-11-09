@@ -35,3 +35,38 @@ func solution2(_ numbers:[Int]) -> [Int] {
     return Set(resultArray).sorted(by:<)
 }
 
+
+func solution3(_ answers:[Int]) -> [Int] {
+    let one : [Int] = [1,2,3,4,5] //0~4
+    let two : [Int] = [2,1,2,3,2,4,2,5] //0~7
+    let three : [Int] = [3,3,1,1,2,2,4,4,5,5] //0~9
+    var pointOne = 0
+    var pointTwo = 0
+    var pointThree = 0
+    var resultArray : [Int] = []
+    
+    for i in 0 ..< answers.count {
+        if answers[i] == one[i%5] {
+            pointOne += 1
+        }
+        if answers[i] == two[i%8] {
+            pointTwo += 1
+        }
+        if answers[i] == three[i%10] {
+            pointThree += 1
+        }
+    }
+    resultArray.append(max(pointOne,pointTwo,pointThree))
+    if resultArray[0] == pointOne {
+        resultArray.append(1)
+    }
+    if resultArray[0] == pointTwo {
+        resultArray.append(2)
+    }
+    if resultArray[0] == pointThree {
+        resultArray.append(3)
+    }
+    
+    resultArray.remove(at:0)
+    return resultArray
+}
