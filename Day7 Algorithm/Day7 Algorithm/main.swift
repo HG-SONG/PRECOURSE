@@ -83,3 +83,18 @@ func solution4(_ a:Int, _ b:Int) -> String {
     }
     return dayArray[ selectIndex ]
 }
+
+func solution4(_ n:Int) -> Int {
+    var sum : Int = 0
+    if n != 0 {
+        for div in 1...n {
+            if n % div == 0 {
+                sum += div
+            }
+        }
+    }
+    else {
+        return 0
+    }
+    return sum
+}
