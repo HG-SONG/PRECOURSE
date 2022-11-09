@@ -70,3 +70,16 @@ func solution3(_ answers:[Int]) -> [Int] {
     resultArray.remove(at:0)
     return resultArray
 }
+
+func solution4(_ a:Int, _ b:Int) -> String {
+    let dayArray : [String] = ["MON","TUE","WED","THU","FRI","SAT","SUN"]
+    let doomsDay : [Int] = [4,8,7,4,9,6,11,8,5,10,7,12] // => 월요일
+    var selectIndex : Int = 0
+    if (doomsDay[a-1] - b) % 7 > 0 {
+        selectIndex = 7 - ((doomsDay[a-1] - b) % 7)
+    }
+    else if (doomsDay[a-1] - b) % 7 < 0 {
+        selectIndex = abs((doomsDay[a-1] - b) % 7)
+    }
+    return dayArray[ selectIndex ]
+}
