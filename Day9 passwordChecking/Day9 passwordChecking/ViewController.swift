@@ -17,6 +17,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    
+    @IBAction func editedSomething(_ sender: UITextField) {
+        change()
+    }
+    
     @IBAction func buttonClick(_ sender: UIButton) {
         change()
     }
