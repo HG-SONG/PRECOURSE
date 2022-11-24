@@ -281,10 +281,10 @@
                         <outlet property="덟" destination="JLJ-gd-0X3" id="0Yv-JW-8un"/>
                         <outlet property="두" destination="Pvt-WB-DTx" id="nbe-t2-jVF"/>
                         <outlet property="분" destination="8pq-VD-qc6" id="dwE-tF-7dh"/>
-                        <outlet property="사분" destination="jCI-Zu-wfh" id="O7O-J5-r9e"/>
-                        <outlet property="삼분" destination="LNn-JI-VGb" id="vSv-RI-4Yf"/>
-                        <outlet property="사십분" destination="ydx-lK-X1Y" id="3Dw-xv-PTJ"/>
                         <outlet property="삼십분" destination="BgY-7V-kpN" id="iMf-gt-0BM"/>
+                        <outlet property="사분" destination="jCI-Zu-wfh" id="O7O-J5-r9e"/>
+                        <outlet property="사십분" destination="ydx-lK-X1Y" id="3Dw-xv-PTJ"/>
+                        <outlet property="삼분" destination="LNn-JI-VGb" id="vSv-RI-4Yf"/>
                         <outlet property="섯" destination="dbd-mw-sWY" id="fAd-1w-Jz8"/>
                         <outlet property="세" destination="FeJ-w1-X54" id="E7q-Dj-Jg1"/>
                         <outlet property="시" destination="XsK-xW-PO2" id="VSR-Kr-1cj"/>
@@ -298,10 +298,10 @@
                         <outlet property="오분" destination="ykg-2u-t45" id="hdx-UQ-alb"/>
                         <outlet property="오십분" destination="y8S-qB-i6F" id="0Lo-nC-ZEq"/>
                         <outlet property="육분" destination="RZV-Jd-h4P" id="kZJ-GX-2tt"/>
-                        <outlet property="이분" destination="7Ls-m1-6dr" id="vVd-EM-lk2"/>
-                        <outlet property="일분" destination="Cvf-91-Lhv" id="b09-d2-7bO"/>
-                        <outlet property="이십분" destination="3aG-IQ-GyR" id="PKM-89-qgG"/>
                         <outlet property="일7" destination="UNp-pb-t3x" id="eBN-SJ-P1M"/>
+                        <outlet property="이십분" destination="3aG-IQ-GyR" id="PKM-89-qgG"/>
+                        <outlet property="일분" destination="Cvf-91-Lhv" id="b09-d2-7bO"/>
+                        <outlet property="이분" destination="7Ls-m1-6dr" id="vVd-EM-lk2"/>
                         <outlet property="전" destination="2Ls-Yq-A0I" id="QVg-53-k7G"/>
                         <outlet property="초" destination="uDe-SG-krB" id="Fg7-Ee-tgl"/>
                         <outlet property="칠분" destination="1Dr-56-OBO" id="kbi-BJ-Ce0"/>

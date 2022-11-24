@@ -65,31 +65,31 @@ class ViewController: UIViewController {
         loop()
     }
     
-    func loop() {
+    private func loop() {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) { self.run()
         }
     }
     
-    func currentTime() -> String {
+    private func currentTime() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm:ss"
         let time = formatter.string(from: Date())
         return time
     }
     
-    func divideTime (time : String) -> [String] {
+    private func divideTime (time : String) -> [String] {
         let dividedData : [String] = time.components(separatedBy: ":")
         return dividedData
     }
     
-    func isAM (hour : String) -> Bool {
+    private func isAM (hour : String) -> Bool {
         if Int(hour)! < 12 {
             return true
         }
         return false
     }
     
-    func checkingHour (hour : String) -> [String]{
+    private func checkingHour (hour : String) -> [String]{
         var hourLettersArray : [String] = []
         var newHour : Int = Int(hour)!
         if Int(hour)! > 12 {
@@ -131,7 +131,7 @@ class ViewController: UIViewController {
         return hourLettersArray
     }
     
-    func checkingMin(min : String) -> [String] {
+    private func checkingMin(min : String) -> [String] {
         var minLettersArray : [String] = []
         
         if Int(min)! / 10 >= 1 {
@@ -177,7 +177,7 @@ class ViewController: UIViewController {
         return minLettersArray
     }
 
-    func checkingSec (sec : String ) -> String {
+    private func checkingSec (sec : String ) -> String {
         var secLettersStr = ""
         
         if Int(sec)! / 10 >= 1 {
@@ -227,7 +227,7 @@ class ViewController: UIViewController {
         return secLettersStr
     }
     
-    func lightOff() {
+    private func lightOff() {
         전.textColor = .darkGray
         후.textColor = .darkGray
         영.textColor = .darkGray
@@ -262,7 +262,7 @@ class ViewController: UIViewController {
         구분.textColor = .darkGray
     }
     
-    func lightOn() {
+    private func lightOn() {
         let timeData = divideTime(time: currentTime())
         오.textColor = .white
         
@@ -350,14 +350,14 @@ class ViewController: UIViewController {
         초.text = checkingSec(sec: timeData[2])
     }
     
-    func isMoon (hour : String) ->Bool {
+    private func isMoon (hour : String) ->Bool {
         if (Int(hour)! >= 0 && Int(hour)! < 7) || Int(hour)! >= 19 {
             return true
         }
             return false
     }
     
-    func changePicture() {
+    private func changePicture() {
         let timeData = divideTime(time: currentTime())
         
         if isMoon(hour:timeData[0]) == true {
